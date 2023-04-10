@@ -61,8 +61,8 @@ function handleCommentClick(tweetId){
     
             if(replyInput.value){
             targetTweetObj.replies.unshift({
-                handle: `@Scrimba`,
-                profilePic: `images/scrimbalogo.png`,
+                handle: `@Luke`,
+                profilePic: `images/guitarist.png`,
                 tweetText: `${replyInput.value}`,
             })
             render()
@@ -79,8 +79,8 @@ function handleTweetBtnClick(){
 
     if(tweetInput.value){
         tweetsData.unshift({
-            handle: `@Scrimba`,
-            profilePic: `images/scrimbalogo.png`,
+            handle: `@Luke`,
+            profilePic: `images/guitarist.png`,
             likes: 0,
             retweets: 0,
             tweetText: tweetInput.value,
@@ -163,7 +163,7 @@ function getFeedHtml(){
     <div class="hidden" id="replies-${tweet.uuid}">
     <div>
         <div class="reply">
-			<img src="images/scrimbalogo.png" class="profile-pic comment-pic">
+			<img src="images/guitarist.png" class="profile-pic comment-pic">
 			<textarea placeholder="What's your reply?" id="reply-input"></textarea>
             <i class="fa-solid fa-reply" data-comment="${tweet.uuid}"></i>
 		</div>
