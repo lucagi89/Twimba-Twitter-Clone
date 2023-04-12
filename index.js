@@ -1,5 +1,19 @@
+
+
+
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+
+let localStorageData = JSON.parse(localStorage.getItem('tweets'))
+let tweetsArray = []
+
+if(localStorageData){
+    tweetsArray = localStorageData
+}
+else{
+    tweetsArray = tweetsData
+
+}
 
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
@@ -21,7 +35,7 @@ document.addEventListener('click', function(e){
 })
  
 function handleLikeClick(tweetId){ 
-    const targetTweetObj = tweetsData.filter(function(tweet){
+    const targetTweetObj = tweetsArray.filter(function(tweet){
         return tweet.uuid === tweetId
     })[0]
 
@@ -56,7 +70,7 @@ function handleReplyClick(replyId){
 
 function handleCommentClick(tweetId){
        let replyInput = document.getElementById('reply-input')
-    let targetTweetObj = tweetsData.filter(function(tweet){
+    let targetTweetObj = tweetsArray.filter(function(tweet){
         return tweet.uuid === tweetId})[0]
     
             if(replyInput.value){
@@ -78,7 +92,7 @@ function handleTweetBtnClick(){
     const tweetInput = document.getElementById('tweet-input')
 
     if(tweetInput.value){
-        tweetsData.unshift({
+        tweetsArray.unshift({
             handle: `@Luke`,
             profilePic: `images/guitarist.png`,
             likes: 0,
@@ -98,7 +112,7 @@ function handleTweetBtnClick(){
 function getFeedHtml(){
     let feedHtml = ``
     
-    tweetsData.forEach(function(tweet){
+    tweetsArray.forEach(function(tweet){
         
         let likeIconClass = ''
         
@@ -172,13 +186,12 @@ function getFeedHtml(){
 </div>
 `
    })
+   localStorage.setItem('tweets', JSON.stringify(tweetsArray))
    return feedHtml 
 }
 
 function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
-    localStorage.setItem("tweets", tweetsData)
-    console.log(localStorage)
 }
 
 render()
