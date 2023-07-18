@@ -76,7 +76,7 @@ function handleCommentClick(tweetId){
             if(replyInput.value){
             targetTweetObj.replies.unshift({
                 handle: `@Luke`,
-                profilePic: `images/guitaristBW.png`,
+                profilePic: `./images/guitaristBW.png`,
                 tweetText: `${replyInput.value}`,
             })
             render()

@@ -1,7 +1,7 @@
 export let tweetsData = [   
     {
         handle: `@Nobody34567 👑`,
-        profilePic: `images/skull.png`,
+        profilePic: `./images/skull.png`,
         likes: 27,
         retweets: 10,
         tweetText: `Everyone is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.`,
@@ -12,7 +12,7 @@ export let tweetsData = [
     },    
     {
         handle: `@RealDonaldTrump 🇺🇸`,
-        profilePic: `images/trump.png`,
+        profilePic: `./images/trump.png`,
         likes: 6500,
         retweets: 234,
         tweetText: `I am the best president in the world!`,
@@ -34,19 +34,19 @@ export let tweetsData = [
     },
         {
         handle: `@Anonymous 🕵️‍♂️`,
-        profilePic: `images/anounymus.png`,
+        profilePic: `./images/anounymus.png`,
         likes: 10,
         retweets: 3,
         tweetText: `We are legion. We do not forgive. We do not forget. Expect us.`,
         replies: [
             {
                 handle: `@StackOverflower ☣️`,
-                profilePic: `images/globe.png`,
+                profilePic: `./images/globe.png`,
                 tweetText: `No. Obviosuly not. Go get a job in McDonald's.`,
             },
             {
                 handle: `@YummyCoder64`,
-                profilePic: `images/vampire.png`,
+                profilePic: `./images/vampire.png`,
                 tweetText: `Love us ❤️`,
             },
         ],
