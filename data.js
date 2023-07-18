@@ -1,7 +1,7 @@
 export let tweetsData = [   
     {
         handle: `@Nobody34567 👑`,
-        profilePic: `images/Skull.png`,
+        profilePic: `images/skull.png`,
         likes: 27,
         retweets: 10,
         tweetText: `Everyone is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid.`,
