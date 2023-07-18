@@ -1,6 +1,5 @@
 
 
-
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
@@ -94,7 +93,7 @@ function handleTweetBtnClick(){
     if(tweetInput.value){
         tweetsArray.unshift({
             handle: `@Luke`,
-            profilePic: `images/guitarist.png`,
+            profilePic: `./images/guitaristBW.png`,
             likes: 0,
             retweets: 0,
             tweetText: tweetInput.value,
